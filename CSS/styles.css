@@ -22,7 +22,7 @@ header {
     overflow: hidden;
     background:
         linear-gradient(rgba(15, 10, 8, 0.65), rgba(15, 10, 8, 0.82)),
-        url("../imagens/Figuras.png") center/cover no-repeat;
+        url("../Imagens/Figuras.png") center/cover no-repeat;
 }
 
 header::after {
