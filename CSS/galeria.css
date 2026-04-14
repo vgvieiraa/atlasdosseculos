@@ -107,6 +107,7 @@ main section h2 {
     font-size: 2rem;
     margin-bottom: 14px;
     color: #d9bc8a;
+    text-align: center;
 
 }
 
@@ -114,6 +115,8 @@ main section p {
     color: #d8c7af;
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
+
 
 }
 
@@ -134,37 +137,10 @@ main section:first-of-type a:hover {
     background: #c08b47;
 }
 
-table {
-    width: 100%;
-    margin-top: 15px;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 16px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-
-th,
-td {
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 14px;
-    text-align: left;
-}
-
-th {
-    background: rgba(183, 138, 74, 0.15);
-    color: #f4ead7;
-}
-
-td {
-    color: #d8c7af;
-}
-
-
 #periodos {
     display: grid;
     gap: 30px;
+    padding: 0;
 
 }
 
@@ -176,69 +152,24 @@ td {
     transition: transform 0.25s ease;
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
 
 }
 
-#periodos article.inverso {
-    flex-direction: row-reverse;
-}
-
-#periodos article:hover a {
-    transform: translateY(-5px);
-
-}
-
 #periodos article h2 {
+    text-align: center;
     font-size: 1.5rem;
     margin-bottom: 15px;
-}
-
-#periodos article p {
-    text-align: justify;
-    font-size: 0.98rem;
-    margin-bottom: 16px;
-    padding: 0 25px;
-}
-
-#periodos article a {
-    text-decoration: none;
-    color: #f4ead7;
-    padding: 10px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
-    transition: 0.3s;
-    font-size: 0.95rem;
 }
 
 #periodos article a:hover {
     text-decoration: underline;
 }
 
-#periodos article .texto {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#periodos article img {
-    width: 40%;
-    border-radius: 12px;
-    border: #16120f solid 2px;
-
-}
-
-#periodos article.galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
 #periodos article.galeria h2 {
+    text-align: center;
     margin-bottom: 0;
 }
 
@@ -313,61 +244,59 @@ footer img {
     margin-top: 10px;
 }
 
+
 @media (max-width: 768px) {
+
     header {
-        min-height: auto;
-        padding: 40px 6%;
+        padding: 40px 5%;
     }
 
     header h1 {
         margin-top: 200px;
-        font-size: 2.6rem;
+        font-size: clamp(2rem, 8vw, 3rem);
     }
 
     header p {
-        font-size: 1rem;
-    }
-
-    main section {
-        padding: 22px;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        font-size: 1.2rem;
     }
 
     nav {
+        width: 90%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
         padding: 10px;
-        gap: 6px;
+        gap: 8px;
     }
 
     nav a {
+        flex-shrink: 0;
         font-size: 0.8rem;
-        padding: 6px 10px;
+        padding: 8px 12px;
+    }
+
+    main {
+        margin: 30px 10px;
+    }
+
+    main section {
+        padding: 20px;
+    }
+
+    main section h2 {
+        font-size: 1.5rem;
     }
 
     #periodos article {
-        flex-direction: column;
+        padding: 16px;
         gap: 15px;
     }
 
-    #periodos article.inverso {
-        flex-direction: column;
+    #periodos article.galeria .carrossel img {
+        height: 180px;
     }
 
-    #periodos article img {
-        width: 100%;
+    footer img {
+        width: 200px;
     }
-
-    #periodos article .texto {
-        width: 100%;
-    }
-
-    #periodos article p {
-        text-align: center;
-        padding: 0;
-    }
-    
 }

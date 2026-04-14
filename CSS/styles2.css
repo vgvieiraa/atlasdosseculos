@@ -45,11 +45,19 @@ header h1 {
 
 }
 
+header h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #d9bc8a;
+    margin-bottom: 15px;
+}
+
 header p {
     text-align: center;
     font-size: 1.6rem;
     color: #d8c7af;
 }
+
 
 nav {
     position: fixed;
@@ -83,7 +91,6 @@ nav a {
 }
 
 nav a:hover {
-    transform: translateY(-5px);
     background: rgba(183, 138, 74, 0.2);
     border-color: rgba(183, 138, 74, 0.45);
 }
@@ -99,6 +106,7 @@ main section {
     border-radius: 22px;
     padding: 32px;
     margin-bottom: 28px;
+    justify-content: center;
     text-align: center;
 
 }
@@ -107,6 +115,8 @@ main section h2 {
     font-size: 2rem;
     margin-bottom: 14px;
     color: #d9bc8a;
+    justify-content: center;
+    text-align: center;
 
 }
 
@@ -114,24 +124,10 @@ main section p {
     color: #d8c7af;
     max-width: 900px;
     margin: 0 auto;
+    justify-content: center;
+    text-align: center;
 
-}
 
-main section:first-of-type a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    text-decoration: none;
-    background: #a8783d;
-    color: #fff6ea;
-    border-radius: 12px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-main section:first-of-type a:hover {
-    transform: translateY(-5px);
-    background: #c08b47;
 }
 
 table {
@@ -144,9 +140,7 @@ table {
     background: rgba(255, 255, 255, 0.03);
 }
 
-
-th,
-td {
+th, td {
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 14px;
     text-align: left;
@@ -161,113 +155,63 @@ td {
     color: #d8c7af;
 }
 
-
 #periodos {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 #periodos article {
     background: rgba(53, 40, 31, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
-    padding: 24px;
-    transition: transform 0.25s ease;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-}
-
-#periodos article.inverso {
-    flex-direction: row-reverse;
-}
-
-#periodos article:hover a {
-    transform: translateY(-5px);
-
+    padding: 35px;
+    display: block;
+    overflow: auto;
 }
 
 #periodos article h2 {
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #d9bc8a;
+    clear: both;
+}
+
+#periodos article h3 {
+    text-align: center;
+    font-size: 1.8rem;
     margin-bottom: 15px;
+    color: #d9bc8a;
+    clear: both;
+}
+
+#periodos article img {
+    float: left;
+    width: 45%;
+    max-width: 400px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: #16120f solid 2px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+#periodos article img.inverso {
+    float: right;
+    margin-right: 0;
+    margin-left: 25px;
 }
 
 #periodos article p {
     text-align: justify;
-    font-size: 0.98rem;
-    margin-bottom: 16px;
-    padding: 0 25px;
-}
-
-#periodos article a {
-    text-decoration: none;
-    color: #f4ead7;
-    padding: 10px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
-    transition: 0.3s;
-    font-size: 0.95rem;
-}
-
-#periodos article a:hover {
-    text-decoration: underline;
-}
-
-#periodos article .texto {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#periodos article img {
-    width: 40%;
-    border-radius: 12px;
-    border: #16120f solid 2px;
-
-}
-
-#periodos article.galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-#periodos article.galeria h2 {
-    margin-bottom: 0;
-}
-
-
-#periodos article.galeria .carrossel {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    width: 100%;
-    padding-bottom: 15px;
-}
-
-
-#periodos article.galeria .carrossel img {
-    height: 250px;
-    width: auto;
-    flex-shrink: 0;
-    border-radius: 12px;
-    border: #16120f solid 2px;
-}
-
-
-#periodos article.galeria .carrossel::-webkit-scrollbar {
-    height: 10px;
-}
-
-#periodos article.galeria .carrossel::-webkit-scrollbar-thumb {
-    background: #d9bc8a;
-    border-radius: 10px;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    color: #d8c7af;
+    max-width: none;
 }
 
 main section:last-of-type a {
@@ -311,63 +255,4 @@ footer a:hover {
 footer img {
     width: 300px;
     margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    header {
-        min-height: auto;
-        padding: 40px 6%;
-    }
-
-    header h1 {
-        margin-top: 200px;
-        font-size: 2.6rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    main section {
-        padding: 22px;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    nav {
-        padding: 10px;
-        gap: 6px;
-    }
-
-    nav a {
-        font-size: 0.8rem;
-        padding: 6px 10px;
-    }
-
-    #periodos article {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #periodos article.inverso {
-        flex-direction: column;
-    }
-
-    #periodos article img {
-        width: 100%;
-    }
-
-    #periodos article .texto {
-        width: 100%;
-    }
-
-    #periodos article p {
-        text-align: center;
-        padding: 0;
-    }
-    
 }

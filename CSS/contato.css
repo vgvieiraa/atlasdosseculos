@@ -21,7 +21,7 @@ header {
     overflow: hidden;
     background:
         linear-gradient(rgba(15, 10, 8, 0.65), rgba(15, 10, 8, 0.82)),
-        url("../imagens/figuras.png") center/cover no-repeat;
+        var(--bg-image) center/cover no-repeat;
 }
 
 header::after {
@@ -41,8 +41,15 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 5px;
-    margin-top: 600px;
-    
+    margin-top: 550px;
+
+}
+
+header h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #d9bc8a;
+    margin-bottom: 15px;
 }
 
 header p {
@@ -61,27 +68,35 @@ nav {
     justify-content: center;
     gap: 10px;
     padding: 14px 18px;
-    background: rgba(15, 10, 8, 0.78);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: #0f0a08c7;
+    border: 1px solid #ffffff1f;
     border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 10px 30px #00000059;
     backdrop-filter: blur(6px);
     z-index: 1000;
     width: max-content;
+
+}
+
+nav :hover {
+    background: rgba(183, 138, 74, 0.2);
+    border-color: rgba(183, 138, 74, 0.45);
     
 }
+
 nav a {
     text-decoration: none;
     color: #f4ead7;
     padding: 10px 15px;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid #ffffff26;
     border-radius: 999px;
-    background: rgba(255,255,255,0.05);
+    background: #ffffff0d;
     transition: 0.3s;
     font-size: 0.95rem;
 }
 
 nav a:hover {
+    transform: translateY(-5px);
     background: rgba(183, 138, 74, 0.2);
     border-color: rgba(183, 138, 74, 0.45);
 }
@@ -93,58 +108,128 @@ main {
 
 main section {
     background: rgba(42, 31, 24, 0.92);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 22px;
     padding: 32px;
     margin-bottom: 28px;
-    justify-content: center;
+
+}
+
+main section h2 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+    color: #d9bc8a;
     text-align: center;
-    
+
 }
 
-table {
-    width: 50%;
-    margin-top: 15px;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 16px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.03);
+main section p {
+    color: #d8c7af;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+
+
 }
 
-th, td {
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 14px;
+main section:first-of-type a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    text-decoration: none;
+    background: #a8783d;
+    color: #fff6ea;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+main section:first-of-type a:hover {
+    transform: translateY(-5px);
+    background: #c08b47;
+}
+
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: left;
-    background: rgba(183, 138, 74, 0.15);
-    color: #f4ead7;
 }
 
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-form label {
+    color: #d8c7af;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #f4ead7;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: rgba(183, 138, 74, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.campo-botao {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-enviar {
+    padding: 12px 35px;
+    background: rgba(183, 138, 74, 0.2);
+    color: #f4ead7;
+    border: 1px solid rgba(183, 138, 74, 0.45);
+    border-radius: 999px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: rgba(183, 138, 74, 0.5);
+    border-color: #d9bc8a;
+}
 
 footer {
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
     background: #0f0b09;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 footer p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #d8c7af;
 }
 
-footer a {
-    color: #d9bc8a;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 footer img {
-    width: 300px;
-    margin-top: 10px;
+    width: 200px;
+    transition: 0.3s;
+}
+
+footer img:hover {
+    opacity: 0.8;
 }
