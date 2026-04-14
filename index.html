@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas dos Séculos</title>
+    
+    <meta name="description" content="O Atlas dos Séculos é um site dedicado aos grandes acontecimentos da história mundial, como a Revolução Francesa, Guerras Mundiais e seus ecos no Brasil.">
+    <meta name="keywords" content="História, Atlas dos Séculos, Segunda Guerra Mundial, Ditadura Militar, Revolução Russa, História do Brasil, História Mundial">
+    <meta name="author" content="Vitor Gabriel Vieira da Costa">
+    <meta name="robots" content="index, follow"> <title>Início | Atlas dos Séculos</title>
     <link rel="stylesheet" href="CSS/styles.css">
-</head>
-<body>
 
-    <header>
+    </head>
+
+<body>
+    <header style="--bg-image: url('../imagens/figuras.png');">
         <nav>
             <a href="index.html">Início</a>
             <hr>
-            <a target="_blank" href="revolucao-francesa.html">Revolução Francesa</a>
-            <a target="_blank" href="guerras-napoleonicas.html">Guerras Napoleônicas</a>
-            <a target="_blank" href="revolucao-russa.html">Revolução Russa</a>
-            <a target="_blank" href="primeira-guerra.html">Primeira Guerra</a>
-            <a target="_blank" href="Nazifascismo.html">Fascismo e Nazismo</a>
-            <a target="_blank" href="segunda-guerra.html">Segunda Guerra</a>
-            <a target="_blank" href="era-vargas.html">Era Vargas</a>
-            <a target="_blank" href="guerra-fria.html">Guerra Fria</a>
-            <a target="_blank" href="ditadura-militar.html">Ditadura Militar</a>
+            <a href="revolucao-francesa.html">Revolução Francesa</a>
+            <a href="guerras-napoleonicas.html">Guerras Napoleônicas</a>
+            <a href="primeira-guerra.html">Primeira Guerra</a>
+            <a href="revolucao-russa.html">Revolução Russa</a>
+            <a href="Nazifascismo.html">Fascismo e Nazismo</a>
+            <a href="segunda-guerra.html">Segunda Guerra</a>
+            <a href="era-vargas.html">Era Vargas</a>
+            <a href="guerra-fria.html">Guerra Fria</a>
+            <a href="ditadura-militar.html">Ditadura Militar</a>
+            <a href="galeria-historica.html">Galeria Histórica</a>
             <a target="_blank" href="contato.html">Fale Conosco</a>
         </nav>
 
@@ -28,8 +35,6 @@
             <h1>Atlas dos Séculos</h1>
             <p>Grandes acontecimentos da história mundial e seus ecos no Brasil.</p>
         </div>
-
-
     </header>
 
     <main>
@@ -46,13 +51,13 @@
                 A história do Brasil não aconteceu separada da história mundial. Revoluções, guerras,
                 disputas ideológicas e transformações econômicas alteraram o rumo da humanidade
                 e também influenciaram diretamente a formação política e social brasileira.
-            </p> 
-            <a href="#periodos">Explorar períodos históricos</a>
+            </p>
+            <a id="explorar-periodos" href="#periodos">Explorar períodos históricos</a>
         </section>
 
-                <section>
+        <section>
             <h2>Panorama histórico</h2>
-            <table >
+            <table>
                 <tr>
                     <th>Período</th>
                     <th>Acontecimento</th>
@@ -68,25 +73,21 @@
                     <td>Guerras Napoleonicas</td>
                     <td>Reorganização da Europa e difusão dos ideais da Revolução Francesa.</td>
                 </tr>
-
                 <tr>
                     <td>1914</td>
                     <td>Primeira Guerra Mundial</td>
                     <td>Transformação da Europa e impacto no Brasil</td>
                 </tr>
-
                 <tr>
                     <td>1922–1939</td>
                     <td>Ascensão do Fascismo e do Nazismo</td>
                     <td>Fortalecimento do autoritarismo, do militarismo e da perseguição racial.</td>
                 </tr>
-
                 <tr>
                     <td>1939</td>
                     <td>Segunda Guerra Mundial</td>
                     <td>Transformação global e impacto no Brasil</td>
                 </tr>
-                
                 <tr>
                     <td>1917</td>
                     <td>Revolução Russa</td>
@@ -111,64 +112,137 @@
         </section>
 
         <section id="periodos">
+
             <article>
-                <h2>Revolução Francesa</h2>
-                <p>
-                    O colapso do Antigo Regime, a defesa de liberdade, igualdade e cidadania
-                    e o início de uma nova era política.
-                </p>
-                <a href="revolucao-francesa.html">Saiba mais</a>
+                <img src="imagens/revolucao-francesa-og.webp" alt="Queda da Bastilha e Revolução Francesa">
+
+                <div class="texto">
+                    <h2>Revolução Francesa</h2>
+                    <p>
+                        O colapso do Antigo Regime, a defesa de liberdade, igualdade e cidadania
+                        e o início de uma nova era política.
+                    </p>
+                    <a href="revolucao-francesa.html">Saiba mais</a>
+                </div>
+            </article>
+
+            <article class="inverso">
+                <img src="imagens/guerras-napoleonicas.jpg" alt="Guerras Napoleônicas">
+
+                <div class="texto">
+                    <h2>Guerras Napoleônicas</h2>
+                    <p>
+                        A expansão de Napoleão remodelou a Europa e gerou impactos que ultrapassaram
+                        suas fronteiras, alcançando também o mundo atlântico.
+                    </p>
+                    <a href="guerras-napoleonicas.html">Saiba mais</a>
+                </div>
             </article>
 
             <article>
-                <h2>Guerras Napoleônicas</h2>
-                <p>
-                    A expansão de Napoleão remodelou a Europa e gerou impactos que ultrapassaram
-                    suas fronteiras, alcançando também o mundo atlântico.
-                </p>
-                <a href="guerras-napoleonicas.html">Saiba mais</a>
+                <img src="imagens/trincheiras-primeira-guerra.jpg" alt="Soldados nas trincheiras durante a Primeira Guerra Mundial">
+                <div class="texto">
+                    <h2>Primeira Guerra Mundial</h2>
+                    <p>
+                        O conflito que transformou a Europa e teve repercussões globais, incluindo
+                        o Brasil, que participou com a Força Expedicionária Brasileira.
+                    </p>
+                    <a href="primeira-guerra-mundial.html">Saiba mais</a>
+                </div>
+            </article>
+
+            <article class="inverso">
+                <img src="imagens/ussr.png" alt="Símbolo da União Soviética representando a Revolução Russa">
+                <div class="texto">
+                    <h2>Revolução Russa</h2>
+                    <p>
+                        A queda do czarismo e o surgimento de um novo projeto político alteraram
+                        profundamente o século XX.
+                    </p>
+                    <a href="revolucao-russa.html">Saiba mais</a>
+                </div>
             </article>
 
             <article>
-                <h2>Revolução Russa</h2>
-                <p>
-                    A queda do czarismo e o surgimento de um novo projeto político alteraram
-                    profundamente o século XX.
-                </p>
-                <a href="revolucao-russa.html">Saiba mais</a>
+                <img src="imagens/capa-nazifascismo.png" alt="Símbolos do Fascismo e Nazismo">
+                <div class="texto">
+                    <h2>Fascismo e Nazismo</h2>
+                    <p>
+                        O crescimento de regimes autoritários e totalitários na Europa, com
+                        consequências devastadoras para o mundo e para o Brasil.
+                    </p>
+                    <a href="facismo-nazismo.html">Saiba mais</a>
+                </div>
+            </article>
+
+            <article class="inverso">
+                <img src="imagens/capa-segunda-guerra.png" alt="Soldados e tanques na Segunda Guerra Mundial">
+                <div class="texto">
+                    <h2>Segunda Guerra Mundial</h2>
+                    <p>
+                        O maior conflito do século XX redefiniu fronteiras, economias e relações de poder
+                        em escala global.
+                    </p>
+                    <a href="segunda-guerra.html">Saiba mais</a>
+                </div>
             </article>
 
             <article>
-                <h2>Segunda Guerra Mundial</h2>
-                <p>
-                    O maior conflito do século XX redefiniu fronteiras, economias e relações de poder
-                    em escala global.
-                </p>
-                <a href="segunda-guerra.html">Saiba mais</a>
+                <img src="imagens/capa-era-vargas.png" alt="Getúlio Vargas na Era Vargas">
+                <div class="texto">
+                    <h2>Era Vargas</h2>
+                    <p>A centralização do poder e a industrialização do Brasil durante o período varguista.</p>
+                    <a href="era-vargas.html">Saiba mais</a>
+                </div>
+            </article>
+
+            <article class="inverso">
+                <img src="imagens/capa-guerra-fria.png" alt="Bandeira dos EUA e URSS na Guerra Fria">
+                <div class="texto">
+                    <h2>Guerra Fria</h2>
+                    <p>
+                        A disputa entre potências influenciou governos, golpes, alianças e conflitos
+                        em várias regiões do mundo.
+                    </p>
+                    <a href="guerra-fria.html">Saiba mais</a>
+                </div>
             </article>
 
             <article>
-                <h2>Guerra Fria</h2>
-                <p>
-                    A disputa entre potências influenciou governos, golpes, alianças e conflitos
-                    em várias regiões do mundo.
-                </p>
-                <a href="guerra-fria.html">Saiba mais</a>
+                <img src="imagens/capa-ditadura.png" alt="Soldados durante a Ditadura Militar no Brasil">
+                <div class="texto">
+                    <h2>Ditadura Militar</h2>
+                    <p>
+                        Da Era Vargas à Ditadura Militar, o Brasil viveu transformações políticas,
+                        econômicas e sociais conectadas ao cenário internacional.
+                    </p>
+                    <a href="ditadura-militar.html">Saiba mais</a>
+                </div>
             </article>
 
-            <article>
-                <h2>Brasil no século XX</h2>
-                <p>
-                    Da Era Vargas à Ditadura Militar, o Brasil viveu transformações políticas,
-                    econômicas e sociais conectadas ao cenário internacional.
-                </p>
-                <a href="era-vargas.html">Saiba mais</a>
+            <article class="galeria">
+                <h2>Galeria Histórica</h2>
+
+                <div class="carrossel">
+                    <img src="imagens/revolucao-francesa-og.webp" alt="Revolução Francesa">
+                    <img src="imagens/1-uma-audiencia-do-diretorio-representada-em-gravura-de-1802.webp" alt="Audiência do Diretório">
+                    <img src="imagens/18brumario-0-cke.webp" alt="Golpe de 18 de Brumário">
+                    <img src="imagens/21b2fee8-df99-4bb8-a688-cb33e767f6c1.webp" alt="Assembleia dos Estados Gerais">
+                    <img src="imagens/A Guerra do Vietnã.webp" alt="Cena da Guerra do Vietnã">
+                    <img src="imagens/A repressão militar na Indonésia.webp" alt="Repressão na Indonésia">
+                    <img src="imagens/a-liberdade-guiando-o-povo-_-eugene-delacroix-e1685387302659.webp" alt="A Liberdade Guiando o Povo">
+                    <img src="imagens/abdicao-czar.webp" alt="Abdicação do Czar na Rússia">
+                    <img src="imagens/Arrest_of_Louis_XVI_and_his_Family,_Varennes,_1791.jpg" alt="Prisão de Luís XVI">
+                    <img src="imagens/Ato Institucional Número 5.jpg" alt="Ato Institucional Número 5 AI-5">
+                    <img src="imagens/auschwitz-trilhos.jpg" alt="Trilhos do campo de Auschwitz">
+                    <img src="imagens/Batalha de Austerlitz.jpg" alt="Batalha de Austerlitz">
+                    <img src="imagens/Batalha de Waterloo.jpg" alt="Batalha de Waterloo">
+                    <img src="imagens/Bloqueio Continental.jpg" alt="Mapa do Bloqueio Continental">
+                    <img src="imagens/Bouchot_-_Le_general_Bonaparte_au_Conseil_des_Cinq-Cents.jpg" alt="Napoleão Bonaparte no Conselho">
+                </div>
+                <a href="galeria-historica.html">Saiba mais</a>
             </article>
         </section>
-
-    
-
-
 
         <section>
             <h2>Fale Conosco</h2>
@@ -182,9 +256,9 @@
 
     <footer>
         <p>Vitor Gabriel Vieira da Costa - RA: 5166714</p>
-        <a href="https://www.uniube.br/" target="_blank"><img src="imagens/uniubebranca.png" alt="Logo Uniube"></a>
-        
+        <a href="https://www.uniube.br/" target="_blank"><img src="imagens/uniubebranca.png" alt="Logo da Uniube"></a>
     </footer>
 
 </body>
+
 </html>
