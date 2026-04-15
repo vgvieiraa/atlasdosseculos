@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #16120f;
+    color: #f4ead7;
+    line-height: 1.6;
+}
+
+header {
+    min-height: 100vh;
+    padding: 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(15, 10, 8, 0.65), rgba(15, 10, 8, 0.82)),
+        var(--bg-image) center/cover no-repeat;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to bottom, rgba(22, 18, 15, 0) 0%, #16120f 100%);
+    pointer-events: none;
+}
+
+header h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    margin-top: 550px;
+
+}
+
+header p {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #d8c7af;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: rgba(15, 10, 8, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    width: max-content;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #f4ead7;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+    background: rgba(183, 138, 74, 0.2);
+    border-color: rgba(183, 138, 74, 0.45);
+}
+
+main {
+    width: min(1600px, 100%);
+    margin: 50px auto;
+}
+
+main section {
+    background: rgba(42, 31, 24, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    padding: 32px;
+    margin-bottom: 28px;
+    text-align: center;
+
+}
+
+main section h2 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+    color: #d9bc8a;
+
+}
+
+main section p {
+    color: #d8c7af;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+main section:first-of-type a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    text-decoration: none;
+    background: #a8783d;
+    color: #fff6ea;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+main section:first-of-type a:hover {
+    transform: translateY(-5px);
+    background: #c08b47;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px;
+    text-align: left;
+}
+
+th {
+    background: rgba(183, 138, 74, 0.15);
+    color: #f4ead7;
+}
+
+td {
+    color: #d8c7af;
+}
+
+
+#periodos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+#periodos article {
+    background: rgba(53, 40, 31, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 24px;
+    transition: transform 0.25s ease;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+#periodos article.inverso {
+    flex-direction: row-reverse;
+}
+
+#periodos article:hover a {
+    transform: translateY(-5px);
+    
+}
+
+#periodos article h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#periodos article p {
+    text-align: justify;
+    font-size: 0.98rem;
+    margin-bottom: 16px;
+    padding: 0 25px;
+}
+
+#periodos article a {
+    text-decoration: none;
+    color: #f4ead7;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+#periodos article a:hover {
+    text-decoration: underline;
+}
+
+#periodos article .texto {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#periodos article img {
+    width: 40%;
+    border-radius: 12px;
+    border: #16120f solid 2px;
+
+}
+
+#periodos article.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#periodos article.galeria h2 {
+    margin-bottom: 0;
+}
+
+
+#periodos article.galeria .carrossel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+
+#periodos article.galeria .carrossel img {
+    height: 250px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: #16120f solid 2px;
+}
+
+
+#periodos article.galeria .carrossel::-webkit-scrollbar {
+    height: 10px;
+}
+
+#periodos article.galeria .carrossel::-webkit-scrollbar-thumb {
+    background: #d9bc8a;
+    border-radius: 10px;
+}
+
+main section:last-of-type a {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 20px;
+    text-decoration: none;
+    background: #a8783d;
+    color: #fff6ea;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+main section:last-of-type a:hover {
+    background: #c08b47;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #0f0b09;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #d8c7af;
+}
+
+footer a {
+    color: #d9bc8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    width: 300px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        min-height: auto;
+        padding: 40px 6%;
+    }
+
+    header h1 {
+        margin-top: 200px;
+        font-size: 2.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main section {
+        padding: 22px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    #periodos article {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #periodos article.inverso {
+        flex-direction: column;
+    }
+
+    #periodos article img {
+        width: 100%;
+    }
+
+    #periodos article .texto {
+        width: 100%;
+    }
+
+    #periodos article p {
+        text-align: center;
+        padding: 0;
+    }
+    
+}
