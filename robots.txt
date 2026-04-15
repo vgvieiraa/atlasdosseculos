@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vgvieiraa.github.io/atlas-dos-seculos/sitemap.xml
