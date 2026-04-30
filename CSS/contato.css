@@ -254,7 +254,7 @@ footer img:hover {
     opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     header {
         min-height: auto;
         padding: 40px 6%;
@@ -292,7 +292,7 @@ footer img:hover {
 
     .navlink {
         padding: 8px 10px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .navlist ul {
@@ -333,7 +333,7 @@ footer img:hover {
     }
 
     .icon {
-        width: 30px;
+        width: 20px;
         
     }
 
@@ -378,6 +378,4 @@ footer img:hover {
 
     .mobilemenu.open::-webkit-scrollbar {
         display: none;
-    } 
-
-}
+    }
