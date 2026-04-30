@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
     background: #16120f;
     color: #f4ead7;
     line-height: 1.6;
@@ -59,27 +59,37 @@ header p {
 }
 
 
-nav {
+.navbar {
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px 18px;
+    align-items: center;
+    padding: 14px 24px;
     background: rgba(15, 10, 8, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
     z-index: 1000;
-    width: max-content;
-
+    width: 100%;
+    max-width: 1800px;
 }
 
-nav a {
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlink {
     text-decoration: none;
     color: #f4ead7;
     padding: 10px 15px;
@@ -88,15 +98,30 @@ nav a {
     background: rgba(255, 255, 255, 0.05);
     transition: 0.3s;
     font-size: 0.95rem;
+    display: inline-block;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-nav a:hover {
+.navlink:hover {
+    transform: translateY(-5px);
     background: rgba(183, 138, 74, 0.2);
     border-color: rgba(183, 138, 74, 0.45);
 }
 
+.mobileicon {
+    display: none;
+
+}
+
+.mobilemenu {
+    display: none;
+
+}
+
 main {
-    width: min(1600px, 100%);
+    width: 90%;
+    max-width: 1600px;
     margin: 50px auto;
 }
 
@@ -125,8 +150,6 @@ main section p {
     margin: 0 auto;
     justify-content: center;
     text-align: center;
-
-
 }
 
 table {
@@ -255,4 +278,161 @@ footer a:hover {
 footer img {
     width: 300px;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+     header {
+        min-height: auto;
+        padding: 40px 6%;
+    }
+
+    header h1 {
+        margin-top: 200px;
+        font-size: 2.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main section {
+        padding: 22px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .navbar {
+        padding: 2px 2px;
+        width: 95%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navlist {
+        display: block; 
+    }
+
+    .navlink {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .navlist ul {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .navintem {
+        display: none;
+    }
+
+    .navintemf {
+        padding: 5px 5px;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobileicon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobileicon button {
+        display: flex;
+        width: 95%;
+        padding: 5px;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.05);
+        color: #f4ead7;
+        border-radius: 15px;
+        font-weight: bold;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .icon {
+        width: 30px;
+        
+    }
+
+    .mobilemenu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobilemenu .navintem {
+        display: block;
+        padding: 0.2rem;
+    }
+
+
+    .mobilemenu.open {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: right;
+        top: 90px;
+        width: 90%;
+        padding: 20px;
+        background: rgba(15, 10, 8, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        max-height: 75vh;
+        overflow-y: auto;
+        
+    }
+
+    .mobilemenu.open .navlink {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+        display: block;
+    }
+
+    .mobilemenu.open::-webkit-scrollbar {
+        display: none;
+    }
+
+     #periodos article {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #periodos::-webkit-scrollbar {
+        display: none;
+    }
+
+    #periodos article img,
+    #periodos article img.inverso {
+        float: none;
+        display: block;
+        width: 60%;
+        max-width: 250px;
+        margin: 0 auto 20px auto;
+    }
+
+    #periodos article .texto {
+        width: 100%;
+    }
+
+    #periodos article p {
+        text-align: center;
+        padding: 0;
+    }
+
+    
+
 }

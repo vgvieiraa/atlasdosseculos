@@ -38,21 +38,43 @@
             style="display:none;visibility:hidden"></iframe></noscript>
 
     <header style="--bg-image: url('../imagens/guerras-napoleonicas.jpg');">
-        <nav>
-            <a href="index.html">Início</a>
-            <hr>
-            <a href="revolucao-francesa.html">Revolução Francesa</a>
-            <a href="#periodos">Guerras Napoleônicas</a>
-            <a href="primeira-guerra.html">Primeira Guerra</a>
-            <a href="revolucao-russa.html">Revolução Russa</a>
-            <a href="Nazifascismo.html">Fascismo e Nazismo</a>
-            <a href="segunda-guerra.html">Segunda Guerra</a>
-            <a href="era-vargas.html">Era Vargas</a>
-            <a href="guerra-fria.html">Guerra Fria</a>
-            <a href="ditadura-militar.html">Ditadura Militar</a>
-            <a href="galeria-historica.html">Galeria Histórica</a>
-            <a target="_blank" href="contato.html">Fale Conosco</a>
+        <nav class="navbar">
+            <div class="navlist">
+                <ul>
+                    <li class="navintemf"><a href="index.html" class="navlink">Início</a></li>
+                    <li class="navintem"><a href="revolucao-francesa.html" class="navlink">Revolução Francesa</a></li>
+                    <li class="navintem"><a href="guerras-napoleonicas.html" class="navlink">Guerras Napoleônicas</a></li>
+                    <li class="navintem"><a href="primeira-guerra.html" class="navlink">Primeira Guerra</a></li>
+                    <li class="navintem"><a href="revolucao-russa.html" class="navlink">Revolução Russa</a></li>
+                    <li class="navintem"><a href="Nazifascismo.html" class="navlink">Fascismo e Nazismo</a></li>
+                    <li class="navintem"><a href="segunda-guerra.html" class="navlink">Segunda Guerra</a></li>
+                    <li class="navintem"><a href="era-vargas.html" class="navlink">Era Vargas</a></li>
+                    <li class="navintem"><a href="guerra-fria.html" class="navlink">Guerra Fria</a></li>
+                    <li class="navintem"><a href="ditadura-militar.html" class="navlink">Ditadura Militar</a></li>
+                    <li class="navintemf"><a href="galeria-historica.html" class="navlink">Galeria Histórica</a></li>
+                    <li class="navintemf"><a target="_blank" href="contato.html" class="navlink">Fale Conosco</a></li>
+                </ul>
+            </div>
+
+            <div class="mobileicon">
+                <button onclick="menushow()"> <img class="icon" src="imagens/mobilemenu.png" alt=""></button>
+
+            </div>
         </nav>
+        
+        <div class="mobilemenu">
+            <ul>
+                    <li class="navintem"><a href="revolucao-francesa.html" class="navlink">Revolução Francesa</a></li>
+                    <li class="navintem"><a href="guerras-napoleonicas.html" class="navlink">Guerras Napoleônicas</a></li>
+                    <li class="navintem"><a href="primeira-guerra.html" class="navlink">Primeira Guerra</a></li>
+                    <li class="navintem"><a href="revolucao-russa.html" class="navlink">Revolução Russa</a></li>
+                    <li class="navintem"><a href="Nazifascismo.html" class="navlink">Fascismo e Nazismo</a></li>
+                    <li class="navintem"><a href="segunda-guerra.html" class="navlink">Segunda Guerra</a></li>
+                    <li class="navintem"><a href="era-vargas.html" class="navlink">Era Vargas</a></li>
+                    <li class="navintem"><a href="guerra-fria.html" class="navlink">Guerra Fria</a></li>
+                    <li class="navintem"><a href="ditadura-militar.html" class="navlink">Ditadura Militar</a></li>
+                </ul>
+        </div>
 
         <div>
             <h1>Atlas dos Séculos</h1>
@@ -62,6 +84,8 @@
 
     </header>
 
+    <script src="Script/script.js"></script>
+    
     <main>
 
         <section>
