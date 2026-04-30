@@ -76,3 +76,154 @@ function ajustarMenu() {
 
 window.addEventListener('load', ajustarMenu);
 window.addEventListener('resize', ajustarMenu);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const imagens = document.querySelectorAll('main img');
+
+    if (imagens.length === 0) {
+        return;
+    }
+
+    const lightbox = document.createElement('div');
+    lightbox.classList.add('lightbox');
+
+    lightbox.innerHTML = `
+        <button class="fechar-lightbox" aria-label="Fechar imagem">×</button>
+        <img src="" alt="">
+    `;
+
+    document.body.appendChild(lightbox);
+
+    const imagemGrande = lightbox.querySelector('img');
+    const botaoFechar = lightbox.querySelector('.fechar-lightbox');
+
+    let zoom = 1;
+
+    function aplicarZoom() {
+        imagemGrande.style.transform = `scale(${zoom})`;
+    }
+
+    function abrirLightbox(imagem) {
+        imagemGrande.src = imagem.src;
+        imagemGrande.alt = imagem.alt;
+
+        zoom = 1;
+        imagemGrande.style.transformOrigin = 'center center';
+        aplicarZoom();
+
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function fecharLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+
+        zoom = 1;
+        imagemGrande.style.transformOrigin = 'center center';
+        aplicarZoom();
+
+        imagemGrande.src = '';
+        imagemGrande.alt = '';
+    }
+
+    function aumentarZoom() {
+        zoom += 0.2;
+
+        if (zoom > 4) {
+            zoom = 4;
+        }
+
+        aplicarZoom();
+    }
+
+    function diminuirZoom() {
+        zoom -= 0.2;
+
+        if (zoom < 1) {
+            zoom = 1;
+        }
+
+        aplicarZoom();
+    }
+
+    function resetarZoom() {
+        zoom = 1;
+        imagemGrande.style.transformOrigin = 'center center';
+        aplicarZoom();
+    }
+
+    function mudarOrigemDoZoom(event) {
+        const tamanhoImagem = imagemGrande.getBoundingClientRect();
+
+        const posicaoX = event.clientX - tamanhoImagem.left;
+        const posicaoY = event.clientY - tamanhoImagem.top;
+
+        const porcentagemX = (posicaoX / tamanhoImagem.width) * 100;
+        const porcentagemY = (posicaoY / tamanhoImagem.height) * 100;
+
+        imagemGrande.style.transformOrigin = `${porcentagemX}% ${porcentagemY}%`;
+    }
+
+    imagens.forEach(function(imagem) {
+        imagem.addEventListener('click', function() {
+            abrirLightbox(imagem);
+        });
+    });
+
+    botaoFechar.addEventListener('click', fecharLightbox);
+
+    lightbox.addEventListener('click', function(event) {
+        if (event.target === lightbox) {
+            fecharLightbox();
+        }
+    });
+
+    lightbox.addEventListener('wheel', function(event) {
+        if (!lightbox.classList.contains('open')) {
+            return;
+        }
+
+        if (!event.ctrlKey) {
+            return;
+        }
+
+        if (event.target !== imagemGrande) {
+            return;
+        }
+
+        event.preventDefault();
+
+        mudarOrigemDoZoom(event);
+
+        if (event.deltaY < 0) {
+            aumentarZoom();
+        } else {
+            diminuirZoom();
+        }
+    }, { passive: false });
+
+    document.addEventListener('keydown', function(event) {
+        if (!lightbox.classList.contains('open')) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            fecharLightbox();
+        }
+
+        if (event.key === '+' || event.key === '=') {
+            imagemGrande.style.transformOrigin = 'center center';
+            aumentarZoom();
+        }
+
+        if (event.key === '-' || event.key === '_') {
+            imagemGrande.style.transformOrigin = 'center center';
+            diminuirZoom();
+        }
+
+        if (event.key === '0') {
+            resetarZoom();
+        }
+    });
+});

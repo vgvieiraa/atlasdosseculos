@@ -360,6 +360,70 @@ footer img {
     margin-top: 10px;
 }
 
+main img {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 30px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95vw;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+
+    cursor: default;
+}
+
+.fechar-lightbox {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+
+    font-size: 2rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+.fechar-lightbox:hover {
+    background: rgba(183, 138, 74, 0.65);
+}
+
 @media screen and (max-width: 768px) {
      header {
         min-height: auto;
