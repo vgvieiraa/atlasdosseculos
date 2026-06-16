@@ -1,13 +1,21 @@
+:root {
+    --cor-fundo-site: #16120f;
+    --cor-texto-principal: #f4ead7;
+    --cor-texto-secundario: #d8c7af;
+    --cor-destaque-dourado: #d9bc8a;
+    --cor-botao-primario: #a8783d;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #16120f;
-    color: #f4ead7;
+    background-color: var(--cor-fundo-site);
+    color: var(--cor-texto-principal);
     line-height: 1.6;
 }
 
@@ -42,7 +50,6 @@ header h1 {
     letter-spacing: 2px;
     margin-bottom: 5px;
     margin-top: 600px;
-
 }
 
 header h2 {
@@ -80,7 +87,6 @@ header p {
 .navlist {
     flex: 1;
     min-width: 0;
-    overflow: hidden;
 }
 
 .navlist ul {
@@ -93,8 +99,6 @@ header p {
     list-style: none;
     margin: 0;
     padding: 0;
-
-    overflow: hidden;
 }
 
 .navlink {
@@ -104,11 +108,17 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.05);
-    transition: 0.3s;
     font-size: 0.95rem;
     display: inline-block;
     white-space: nowrap;
     flex-shrink: 0;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.navlink:hover {
+    transform: translateY(-5px);
+    background: rgba(183, 138, 74, 0.2);
+    border-color: rgba(183, 138, 74, 0.45);
 }
 
 .mobileicon {
@@ -137,16 +147,12 @@ header p {
 }
 
 .mobilemenu {
-    display: none;
-}
-
-.mobilemenu.open {
     display: flex;
     position: fixed;
     top: 105px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(90vw, 420px);
+    right: 4%;
+    transform: translateY(-20px);
+    width: min(90vw, 320px);
     max-height: 75vh;
     overflow-y: auto;
     padding: 20px;
@@ -154,11 +160,13 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-
     z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
 
-.mobilemenu.open ul {
+.mobilemenu ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -168,7 +176,13 @@ header p {
     padding: 0;
 }
 
-.mobilemenu.open .navlink {
+.mobilemenu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobilemenu .navlink {
     display: block;
     width: 100%;
     text-align: center;
@@ -187,7 +201,6 @@ main section {
     border-radius: 22px;
     padding: 32px;
     margin-bottom: 28px;
-
 }
 
 main section h2 {
@@ -195,7 +208,6 @@ main section h2 {
     margin-bottom: 14px;
     color: #d9bc8a;
     text-align: center;
-
 }
 
 main section p {
@@ -203,8 +215,6 @@ main section p {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-
-
 }
 
 main section:first-of-type a {
@@ -216,14 +226,13 @@ main section:first-of-type a {
     color: #fff6ea;
     border-radius: 12px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 main section:first-of-type a:hover {
     transform: translateY(-5px);
     background: #c08b47;
 }
-
 
 .formulario {
     width: 100%;
@@ -257,7 +266,7 @@ main section:first-of-type a:hover {
     color: #f4ead7;
     font-family: inherit;
     font-size: 1rem;
-    transition: 0.3s ease;
+    transition: border-color 0.3s ease-in, background-color 0.3s ease-in;
 }
 
 .campo-form input:focus,
@@ -268,14 +277,14 @@ main section:first-of-type a:hover {
 }
 
 button {
-      text-decoration: none;
+    text-decoration: none;
     color: #f4ead7;
     padding: 10px 15px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.05);
-    transition: 0.3s;
     font-size: 0.95rem;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
 button:hover {
@@ -288,8 +297,6 @@ button:hover {
     text-align: center;
     margin-top: 10px;
 }
-
-
 
 footer {
     text-align: center;
@@ -305,7 +312,7 @@ footer p {
 
 footer img {
     width: 200px;
-    transition: 0.3s;
+    transition: opacity 0.3s ease;
 }
 
 footer img:hover {

@@ -74,7 +74,8 @@ function ajustarMenu() {
     }
 }
 
-window.addEventListener('load', ajustarMenu);
+document.addEventListener('DOMContentLoaded', ajustarMenu);
+ajustarMenu();
 window.addEventListener('resize', ajustarMenu);
 
 document.addEventListener('DOMContentLoaded', function() {
